@@ -1,0 +1,26 @@
+{
+  "path": "resources/[TestScripts]/[gm_carhud]/",
+  "useKilometers": true,
+  "useKmh": true,
+  "maxSpeed": 280,
+  "mileage": true,
+  "keys": {
+    "seatbelt": 305,
+    "cruiser": 217,
+    "signalL": 189,
+    "signalR": 190,
+    "signalB": 187
+  },
+  "appearance": {
+    "scale": 1.0,
+    "speedBgColor": "#4a4a55",
+    "speedColor": "#23bf7c",
+    "primaryColor": "#4a4a55",
+    "signalsOn": "#eecc00",
+    "signalsOff": "#aa8833",
+    "onColor": "#33cc33",
+    "offColor": "#cc3333",
+    "fuelColor": "#996633",
+    "lightsOff": "#4433cc"
+  }
+}

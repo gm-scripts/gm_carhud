@@ -77,12 +77,12 @@ const configLoaded = (): void => {
         speedNum = speed / conf["maxSpeed"];
         speedStr = `${speed}km/h`;
       } else {
-        speed = Math.ceil(speed * 2.237);
+        speed = Math.ceil(speedSource * 2.237);
         speedNum = speed / conf["maxSpeed"];
         speedStr = `${speed}MPH`;
       }
       // Vehicle Fuel
-      fuel = GetVehicleFuelLevel(vehicle) / 100;
+      fuel = Math.ceil(GetVehicleFuelLevel(vehicle)) / 100;
       // Vehicle Gear
       gear = GetVehicleCurrentGear(vehicle).toString();
       if ((speed === 0 && gear === "0") || (speed === 0 && gear === "1")) {
@@ -223,7 +223,7 @@ const configLoaded = (): void => {
       if (IsPedInAnyVehicle(player, false) && GetPedInVehicleSeat(vehicle, -1)) {
         serverCallback(`gm_${script}:getMileage`, { plate: plate }, (km: number) => {
           let dist = 0;
-          const showKm = Math.floor(km * 1.33) / 1000;
+          const showKm = km * 1.33 / 1000;
 
           if (IsVehicleOnAllWheels(vehicle)) {
             dist = GetDistanceBetweenCoords(
@@ -270,9 +270,9 @@ const setCarSignal = (status: string) => {
 
 const sendDistance = (km: number) => {
   if (conf["useKilometers"]) {
-    distance = `${Math.floor(km)}km`;
+    distance = `${Math.round(km)}km`;
   } else {
-    distance = `${Math.floor(km * 0.62137)}miles`;
+    distance = `${Math.round(km * 0.62137)}miles`;
   }
 };
 

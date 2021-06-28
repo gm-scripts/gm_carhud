@@ -120,12 +120,12 @@ const checkConf = (): void => {
       }
     }
   }
-  if (conf["framework"] != "esx" && conf["framework"] != "vrp" && conf["framework"] != "none") {
-    error(
-      `framework "${conf["framework"]}" does not exist, please use "esx", "vrp" or "none"`,
-      "config",
-    );
-  }
+  // if (conf["framework"] != "esx" && conf["framework"] != "vrp" && conf["framework"] != "none") {
+  //   error(
+  //     `framework "${conf["framework"]}" does not exist, please use "esx", "vrp" or "none"`,
+  //     "config",
+  //   );
+  // }
 };
 
 // const checkLang = (): void => {
